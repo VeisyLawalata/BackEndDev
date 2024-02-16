@@ -1,10 +1,11 @@
 import {
   View,
   Text,
-  Image,
+  // Image,
   TextInput,
   ScrollView,
   StyleSheet,
+  TouchableOpacity,
 } from 'react-native';
 import React from 'react';
 
@@ -12,43 +13,14 @@ const App: React.FC = () => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.box}>
-        <Text style={styles.text}>My Favorite Book</Text>
-        <Image
-          source={{
-            uri: 'https://i.pinimg.com/564x/f9/1d/05/f91d053ac5d3597eac54cb12a4e07ef4.jpg',
-          }}
-          style={styles.image}
-        />
-        <TextInput placeholder="Type here..." style={styles.input} />
-
-        <Image
-          source={{
-            uri: 'https://i.pinimg.com/564x/cd/83/00/cd8300a6708cdfef8eecb04943057d1d.jpg',
-          }}
-          style={styles.image}
-        />
-        <TextInput placeholder="Type here..." style={styles.input} />
-        <Image
-          source={{
-            uri: 'https://i.pinimg.com/564x/f3/6d/7c/f36d7cf399b61d6081261163c920382b.jpg',
-          }}
-          style={styles.image}
-        />
-        <TextInput placeholder="Type here..." style={styles.input} />
-        <Image
-          source={{
-            uri: 'https://i.pinimg.com/564x/e8/6f/99/e86f99f65555db6530c3594c2254a075.jpg',
-          }}
-          style={styles.image}
-        />
-        <TextInput placeholder="Type here..." style={styles.input} />
-        <Image
-          source={{
-            uri: 'https://i.pinimg.com/564x/ee/6d/23/ee6d2360acbe6138a85f643cbe7f8fd7.jpg',
-          }}
-          style={styles.image}
-        />
-        <TextInput placeholder="Type here..." style={styles.input} />
+        <Text style={styles.text}>Welcome</Text>
+        <Text style={styles.text2}>Username</Text>
+        <TextInput placeholder="Masukan username anda" style={styles.input} />
+        <Text style={styles.text3}>Password</Text>
+        <TextInput placeholder="Masukan password anda" style={styles.input2} />
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Sign In</Text>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
@@ -63,26 +35,69 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   text: {
-    fontSize: 20,
+    fontSize: 40,
     fontWeight: 'bold',
     marginBottom: 10,
     // Gradasi warna teks
-    color: '#006600', // Warna hijau
+    color: '#000000', // Warna hijau
     textShadowColor: 'rgba(0, 0, 0, 0.75)',
     textShadowOffset: {width: -1, height: 1},
     textShadowRadius: 10,
   },
-  image: {
-    width: 200,
-    height: 300,
-    resizeMode: 'cover',
+  text2: {
+    fontSize: 15,
     marginBottom: 10,
+    marginTop: 30,
+    // Gradasi warna teks
+    color: '#000000', // Warna hijau
   },
+  // image: {
+  //   width: 200,
+  //   height: 300,
+  //   resizeMode: 'cover',
+  //   marginBottom: 10,
+  // },
   input: {
-    height: 40,
+    height: 45,
     borderColor: 'gray',
     borderWidth: 1,
     padding: 8,
+    borderRadius: 10,
+    width: '100%',
+  },
+  text3: {
+    fontSize: 15,
+    marginBottom: 10,
+    marginTop: 20,
+    // Gradasi warna teks
+    color: '#000000', // Warna hijau
+  },
+  // image: {
+  //   width: 200,
+  //   height: 300,
+  //   resizeMode: 'cover',
+  //   marginBottom: 10,
+  // },
+  input2: {
+    height: 45,
+    borderColor: 'gray',
+    borderWidth: 1,
+    padding: 8,
+    borderRadius: 10,
+    width: '100%',
+  },
+
+  button: {
+    backgroundColor: 'orange', // Warna latar belakang orange
+    borderRadius: 5,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    alignItems: 'center',
+    marginTop: 30,
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
   },
 });
 
