@@ -6,7 +6,6 @@ import {Register, UserList} from './screens';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
-
   return (
     <NavigationContainer>
     <Stack.Navigator>
